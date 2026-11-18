@@ -1,0 +1,11 @@
+@echo off
+setlocal
+set "LOG=%windir%\Setup\Scripts\{{LOGNAME}}"
+set "APPS=%windir%\Setup\Scripts\Apps"
+echo === aeroOS first-boot install %DATE% %TIME% === >> "%LOG%"
+{{INSTALL_LINES}}
+echo Applying final UI tweaks... >> "%LOG%"
+reg add "HKU\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v TaskbarDa /t REG_DWORD /d 0 /f >> "%LOG%" 2>&1
+echo === aeroOS first-boot install finished %DATE% %TIME% === >> "%LOG%"
+endlocal
+exit /b 0
