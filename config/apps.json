@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "logName": "aeroOS-install.log",
+  "note": "Все ссылки — официальные. Nothing is bundled; files are downloaded during the build.",
+  "items": [
+    {
+      "id": "node",
+      "label": "Node.js 26.13.1 LTS",
+      "file": "node-v26.13.1-x64.msi",
+      "url": "https://nodejs.org/dist/v26.13.1/node-v26.13.1-x64.msi",
+      "fallbackUrl": "",
+      "sha256": "",
+      "installer": "msi",
+      "args": "/qn /norestart ALLUSERS=1",
+      "allowUnsigned": false,
+      "enabled": true
+    },
+    {
+      "id": "java",
+      "label": "Eclipse Temurin JDK 25.0.5 LTS",
+      "file": "TemurinJDK25-x64.msi",
+      "url": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.5%2B8/OpenJDK25U-jdk_x64_windows_hotspot_25.0.5_8.msi",
+      "fallbackUrl": "",
+      "sha256": "",
+      "installer": "msi",
+      "args": "/qn /norestart ALLUSERS=1 ADDLOCAL=FeatureMain,FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome",
+      "allowUnsigned": false,
+      "enabled": true
+    },
+    {
+      "id": "chrome",
+      "label": "Google Chrome Enterprise",
+      "file": "GoogleChromeEnterprise64.msi",
+      "url": "https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi",
+      "fallbackUrl": "",
+      "sha256": "",
+      "installer": "msi",
+      "args": "/qn /norestart",
+      "allowUnsigned": false,
+      "enabled": true
+    },
+    {
+      "id": "git",
+      "label": "Git 2.56.1",
+      "file": "Git-2.56.1-64-bit.exe",
+      "url": "https://github.com/git-for-windows/git/releases/download/v2.56.1.windows.1/Git-2.56.1-64-bit.exe",
+      "fallbackUrl": "",
+      "sha256": "C330C72E10B408CC39994BFEFDB63542B0D93D21699325C3E0BD874AF8A5A559",
+      "installer": "exe",
+      "args": "/VERYSILENT /NORESTART /NOCANCEL /SP- /SUPPRESSMSGBOXES",
+      "allowUnsigned": false,
+      "enabled": true
+    },
+    {
+      "id": "python",
+      "label": "Python 3.14.10",
+      "file": "python-3.14.10-amd64.exe",
+      "url": "https://www.python.org/ftp/python/3.14.10/python-3.14.10-amd64.exe",
+      "fallbackUrl": "",
+      "sha256": "92480239264744FE0386A1BD8275786FEFA126E3129E56A68E22B52C73329965",
+      "installer": "exe",
+      "args": "/quiet InstallAllUsers=1 PrependPath=1 Include_test=0 Include_pip=1",
+      "allowUnsigned": false,
+      "enabled": true
+    },
+    {
+      "id": "vscode",
+      "label": "Visual Studio Code 1.147.0",
+      "file": "VSCodeSetup-x64-1.147.0.exe",
+      "url": "https://update.code.visualstudio.com/1.147.0/win32-x64/stable",
+      "fallbackUrl": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/VSCodeSetup-x64-1.147.0.exe",
+      "sha256": "02FD3F76968ED56542CD44F4762A106F5F1175B939BBC10D6D875609DA794355",
+      "installer": "exe",
+      "args": "/VERYSILENT /NORESTART /SP- /SUPPRESSMSGBOXES /MERGETASKS=!runcode",
+      "allowUnsigned": false,
+      "enabled": true
+    },
+    {
+      "id": "explorerpatcher",
+      "label": "ExplorerPatcher 71.1 (unsigned by its author)",
+      "file": "ep_setup.exe",
+      "url": "https://github.com/valinet/ExplorerPatcher/releases/download/26100.9711.71.1/ep_setup.exe",
+      "fallbackUrl": "",
+      "sha256": "",
+      "installer": "exe",
+      "args": "",
+      "allowUnsigned": true,
+      "enabled": true,
+      "note": "Не подписан автором. Отключается ключом -NoExplorerPatcher. Привязан к конкретному билду Windows."
+    }
+  ]
+}
